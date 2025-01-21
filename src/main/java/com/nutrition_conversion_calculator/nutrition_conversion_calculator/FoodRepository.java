@@ -1,10 +1,10 @@
 package com.nutrition_conversion_calculator.nutrition_conversion_calculator;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * CRUD operations to access repository of food items.
  */
-public interface FoodRepository extends CrudRepository<FoodItem, String> {
+public interface FoodRepository extends JpaRepository<FoodItem, String> {
     FoodItem findByFoodName(String foodName);
 }
