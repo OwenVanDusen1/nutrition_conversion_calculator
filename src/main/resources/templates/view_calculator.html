@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <script type="text/javascript" src="/src/main/resources/templates/autofill.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Nutrition Conversion Calculator</h1>
+
+            <input type="text" class="form-control" id="searchFood">
+
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#searchFood").autocomplete({
+                    source: "autofill",
+                    minLength: 3
+                })
+            })
+        </script>
+    </body>
+</html>
